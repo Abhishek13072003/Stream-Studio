@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
+  <link rel="shortcut icon" href="logo/logo3.png" type="image/x-icon" >
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Slick Carousel CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    .contact-info {
+      margin-top: 20px;
+    }
+
+    .contact-info p {
+      margin-bottom: 10px;
+    }
+
+    .contact-form {
+      margin-top: 30px;
+    }
+
+    .contact-form input[type="text"],
+    .contact-form input[type="email"],
+    .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+
+    .contact-form textarea {
+      height: 150px;
+    }
+
+    .contact-form input[type="submit"] {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      padding: 12px 20px;
+      cursor: pointer;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    .contact-form input[type="submit"]:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+    <header>
+        <img class="logo" src="logo/logo1.png" alt="logo" width="200" >
+        <nav>
+            <ul>
+                <li style="font-size: large;">
+                    <a href="#" onMouseOver="this.style.color='red'" onMouseOut="this.style.color='white'">Home</a></li>
+                <li style="font-size: large;">
+                    <a href="Romantic.html" onMouseOver="this.style.color='red'" onMouseOut="this.style.color='white'">Romantic</a></li>
+                <li style="font-size: large;">
+                    <a href="Action.html" onMouseOver="this.style.color='red'" onMouseOut="this.style.color='white'">Action</a></li>
+                <li style="font-size: large;">
+                    <a href="Comedy.html" onMouseOver="this.style.color='red'" onMouseOut="this.style.color='white'">Comedy</a></li>
+                <li style="font-size: large;">
+                    <a href="Drama.html" onMouseOver="this.style.color='red'" onMouseOut="this.style.color='white'">Drama</a></li>
+                <li style="font-size: large;">
+                    <a href="contact.html" onMouseOver="this.style.color='red'" onMouseOut="this.style.color='white'">Contact</a></li>
+
+                    
+            </ul>
+        </nav>
+         <!-- Search bar -->
+         <div class="search-container" >
+            <input type="text" id="searchInput" placeholder="Search movies...">
+            <button id="searchButton">Search</button>
+        </div>
+    </header>
+
+  <div class="container">
+    <h1>Contact Us</h1>
+    <div class="contact-info">
+      <p><strong>Email:</strong> example@example.com</p>
+      <p><strong>Phone:</strong> +1234567890</p>
+      <p><strong>Address:</strong> 123 Main Street, City, Country</p>
+    </div>
+    <div class="contact-form">
+      <h2>Send us a message</h2>
+      <form action="#" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <input type="submit" value="Send Message">
+      </form>
+    </div>
+  </div>
+  <footer class="bg-dark text-white py-4 text-center">
+    <div class="container">
+        <p>&copy; 2024 Stream Studio</p>
+    </div>
+</footer>
+ <!-- jQuery -->
+ <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+ <!-- Bootstrap JS -->
+ <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+ <!-- Slick Carousel JS -->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+ <script src="script.js"></script>
+</body>
+</html>

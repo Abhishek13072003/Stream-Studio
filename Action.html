@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stream Studio !!</title>
+    <link rel="shortcut icon" href="logo/logo3.png" type="image/x-icon" >
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Slick Carousel CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <header>
+        <img class="logo" src="logo/logo1.png" alt="logo" width="200" >
+        <nav>
+            <ul>
+                <li style="font-size: large;">
+                    <a href="#" onMouseOver="this.style.color='red'" onMouseOut="this.style.color='white'">Home</a></li>
+                <li style="font-size: large;">
+                    <a href="Romantic.html" onMouseOver="this.style.color='red'" onMouseOut="this.style.color='white'">Romantic</a></li>
+                <li style="font-size: large;">
+                    <a href="Action.html" onMouseOver="this.style.color='red'" onMouseOut="this.style.color='white'">Action</a></li>
+                <li style="font-size: large;">
+                    <a href="Comedy.html" onMouseOver="this.style.color='red'" onMouseOut="this.style.color='white'">Comedy</a></li>
+                <li style="font-size: large;">
+                    <a href="Drama.html" onMouseOver="this.style.color='red'" onMouseOut="this.style.color='white'">Drama</a></li>
+                <li style="font-size: large;">
+                    <a href="#" onMouseOver="this.style.color='red'" onMouseOut="this.style.color='white'">Contact</a></li>
+
+                    
+            </ul>
+        </nav>
+         <!-- Search bar -->
+         <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Search movies...">
+            <button id="searchButton">Search</button>
+        </div>
+    </header>
+
+
+    <main class="py-4">
+        <section id="featured-movies" class="py-4" >
+            <div class="container">
+                <!-- <h2>Featured Movies</h2> -->
+                <div class="slider"></div>
+                    <!-- Movie Slides -->
+                    <div>
+                        <video loop autoplay muted width="100%" height="50%">
+                            <source src="videos/Avenger video.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    
+                    <!-- Add more movie slides here -->
+                </div>
+            </div>
+        </section>
+
+        <section id="romantic-bollywood-hits" class="py-4">
+           
+            <div class="container"  >
+                <h2>Top Rated Movies</h2>
+                <div class="slider">
+                    <!-- Movie Slides -->
+                    <div>
+                        <img src="poster/avengers-endgame.png" alt="Movie 12" class="img-fluid">
+                        <h3>avengers-infinity-war</h3>
+                    </div>
+                    <div>
+                        <img src="poster/avengers-infinity-war.png" alt="Movie 13" class="img-fluid">
+                        <h3>avengers-endgame</h3>
+                    </div>
+                    <div>
+                        <img src="poster/black-panther.png" alt="Movie 14" class="img-fluid">
+                        <h3>Devdas</h3>
+                    </div>
+                    <div>
+                        <img src="poster/Crakk.png" alt="Movie 4" class="img-fluid">
+                        <h3>Crakk</h3>
+                    </div>
+                    <div>
+                        <img src="poster/Tiger3.png" alt="Movie 8" class="img-fluid">
+                        <h3>Tiger3</h3>
+                    </div>
+                    <!-- Add more movie slides here -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-dark text-white py-4 text-center">
+        <div class="container">
+            <p>&copy; 2024 Stream Studio</p>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Slick Carousel JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
