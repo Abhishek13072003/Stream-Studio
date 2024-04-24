@@ -10,26 +10,45 @@
     <!-- Slick Carousel CSS -->
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
-    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="css/slick.css" />
+    <link rel="stylesheet" href="css/slick-theme.css" />
+    <link rel="stylesheet" href="css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="css/animate.min.css" />
+    <link rel="stylesheet" href="css/magnific-popup.css" />
+    <link rel="stylesheet" href="css/select2.min.css" />
+    <link rel="stylesheet" href="css/select2-bootstrap4.min.css" />
+  
+    <link rel="stylesheet" href="css/slick-animation.css" />
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        #home-slider .slick-bg.s-bg-1{
+    background-image: url(slider/golmal.jpg);
+    
+}
+    </style>
 </head>
 <body>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">top
+    </button>
     <header>
         <img class="logo" src="logo/logo1.png" alt="logo" width="200" >
         <nav>
             <ul>
                 <li style="font-size: large;">
-                    <a href="#" onMouseOver="this.style.color='red'" onMouseOut="this.style.color='white'">Home</a></li>
+                    <a href="index.html" onMouseOver="this.style.color='orange'" onMouseOut="this.style.color='white'">Home</a></li>
                 <li style="font-size: large;">
-                    <a href="Romantic.html" onMouseOver="this.style.color='red'" onMouseOut="this.style.color='white'">Romantic</a></li>
+                    <a href="Romantic.html" onMouseOver="this.style.color='orange'" onMouseOut="this.style.color='white'">Romantic</a></li>
                 <li style="font-size: large;">
-                    <a href="Action.html" onMouseOver="this.style.color='red'" onMouseOut="this.style.color='white'">Action</a></li>
+                    <a href="Action.html" onMouseOver="this.style.color='orange'" onMouseOut="this.style.color='white'">Action</a></li>
                 <li style="font-size: large;">
-                    <a href="Comedy.html" onMouseOver="this.style.color='red'" onMouseOut="this.style.color='white'">Comedy</a></li>
+                    <a href="Comedy.html" onMouseOver="this.style.color='orange'" onMouseOut="this.style.color='orange'">Comedy</a></li>
                 <li style="font-size: large;">
-                    <a href="Drama.html" onMouseOver="this.style.color='red'" onMouseOut="this.style.color='white'">Drama</a></li>
+                    <a href="contact.html" onMouseOver="this.style.color='orange'" onMouseOut="this.style.color='white'">Contact</a></li>
                 <li style="font-size: large;">
-                    <a href="#" onMouseOver="this.style.color='red'" onMouseOut="this.style.color='white'">Contact</a></li>
-
+                    <a href="creator.html" onMouseOver="this.style.color='orange'" onMouseOut="this.style.color='white'">Creator</a></li>
+                    <li style="font-size: large;">
+                      <a href="login.html" onMouseOver="this.style.color='orange'" onMouseOut="this.style.color='white'">profile</a></li>
                     
             </ul>
         </nav>
@@ -41,49 +60,135 @@
     </header>
 
 
+     <!-- slider starts  -->
+  <section id="home" class="iq-main-slider p-0">
+    <div id="home-slider" class="slider m-0 p-0">
+      <div class="slide slick-bg s-bg-1">
+        <div class="container-fluid position-relative h-100">
+          <div class="slider-inner h-100">
+            <div class="row align-items-center h--100">
+              <div class="col-xl-6 col-lg-12 col-md-12">
+                <a href="javascript:void(0)">
+                </a>
+                <h1 class="slider-text big-title title text-uppercase" data-animation-in="fadeInLeft"
+                  data-delay-in="0.6">
+                 Golmaal
+                </h1>
+                <div class="d-flex flex-wrap align-items-center fadeInLeft animated" data-animation-in="fadeInLeft"
+                  style="opacity: 1">
+                  <div class="slider-ratting d-flex align-items-center mr-4 mt-2 mt-md-3">
+                    <ul
+                      class="ratting-start p-0 m-0 list-inline text-primary d-flex align-items-center justify-content-left">
+                      <li><i class="fa fa-star"></i></li>
+                      <li><i class="fa fa-star"></i></li>
+                      <li><i class="fa fa-star"></i></li>
+                      <li><i class="fa fa-star"></i></li>
+                      <li><i class="fa fa-star-half"></i></li>
+                    </ul>
+                    <span class="text-white ml-2">7.3(imbd)</span>
+                  </div>
+                  <div class="d-flex align-items-center mt-2 mt-md-3">
+                    <span class="badge badge-secondary p-2">16+</span>
+                    <span class="ml-3">2h 21min</span>
+                  </div>
+                </div>
+                <p data-animation-in="fadeInUp">
+                    Four runaway crooks take shelter in a bungalow which is owned by a blind couple.
+                </p>
+                <div class="trending-list" data-animation-in="fadeInUp" data-delay-in="1.2">
+                  <div class="text-primary title starring">
+                    Starring :
+                    <span class="text-body">Ajay Devgan, Arshad Warshi, Sharman Joshi</span>
+                  </div>
+                  <div class="text-primary title genres">
+                    Genres : <span class="text-body">Comedy</span>
+                  </div>
+                  <div class="text-primary title tag">
+                    Tags :
+                    <span class="text-body">Drama, Comedy</span>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center r-mb-23 mt-4" data-animation-in="fadeInUp" data-delay-in="1.2">
+                  <a href="#" class="btn btn-hover iq-button"><i class="fa fa-play mr-3"></i>Play Now</a>
+                  <a href="#" class="btn btn-link">More Details</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-5 col-lg-12 col-md-12 trailor-video">
+              <a href="videos/Avenger video.mp4" class="video-open playbtn">
+                <img src="images/play.png" class="play" alt="" />
+                <span class="w-trailor">Watch Trailer</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- slider ends -->
+
+
+
     <main class="py-4">
-        <section id="featured-movies" class="py-4" >
+        <!-- <section id="featured-movies" class="py-4">
             <div class="container">
-                <!-- <h2>Featured Movies</h2> -->
-                <div class="slider"></div>
-                    <!-- Movie Slides -->
+                <h2>Featured Movies</h2>
+                <div class="slider">
+                    
                     <div>
-                        <video controls autoplay muted width="100%" height="50%">
-                            <source src="videos/Avenger video.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
+                        <img src="thumbnail/Crakk thumbnail.jpg" alt="Movie 1" class="img-fluid">
+                        <h3>Crakk - Jeetega toh Jiega....</h3>
+                    </div>
+                    <div>
+                        <img src="thumbnail/Hanuman thumbnail.jpg" alt="Movie 2" class="img-fluid">
+                        <h3>Hanuman</h3>
+                    </div>
+                    <div>
+                        <img src="thumbnail/Hii papa thumbnail.jpg" alt="Movie 3" class="img-fluid">
+                        <h3>Tiger3</h3>
                     </div>
                     
-                    <!-- Add more movie slides here -->
                 </div>
             </div>
-        </section>
+        </section> -->
 
         <section id="romantic-bollywood-hits" class="py-4">
            
             <div class="container"  >
-                <h2>Top Rated Movies</h2>
+                <h2><b>Featured Comedy</b></h2>
                 <div class="slider">
                     <!-- Movie Slides -->
                     <div>
-                        <img src="poster/avengers-endgame.png" alt="Movie 12" class="img-fluid">
-                        <h3>avengers-infinity-war</h3>
+                        <img src="poster/Judwaa_2.png" alt="Movie 4" class="img-fluid">
+                        <h3>Judwaa_2</h3>
                     </div>
                     <div>
-                        <img src="poster/avengers-infinity-war.png" alt="Movie 13" class="img-fluid">
-                        <h3>avengers-endgame</h3>
+                        <img src="poster/Hum Dil De Chuke Sanam.png" alt="Movie 5" class="img-fluid">
+                        <h3>Hum Dil De Chuke Sanam</h3>
+                    </div>
+                    
+                    <div>
+                        <img src="poster/Hum Apke Hain Kaun.png" alt="Movie 8" class="img-fluid">
+                        <h3>Hum Apke Hain Kaun</h3>
                     </div>
                     <div>
-                        <img src="poster/black-panther.png" alt="Movie 14" class="img-fluid">
-                        <h3>Devdas</h3>
+                        <img src="poster/Jab We Met.png" alt="Movie 10" class="img-fluid">
+                        <h3>Jab We Met</h3>
                     </div>
                     <div>
-                        <img src="poster/Crakk.png" alt="Movie 4" class="img-fluid">
-                        <h3>Crakk</h3>
+                        <img src="poster/Maine Pyar kyun kiya.png" alt="Movie 11" class="img-fluid">
+                        <h3>Maine Pyar kyun kiya</h3>
                     </div>
                     <div>
-                        <img src="poster/Tiger3.png" alt="Movie 8" class="img-fluid">
-                        <h3>Tiger3</h3>
+                        <img src="poster/Pyar-Kiya-To-Darna-Kya.png" alt="Movie 13" class="img-fluid">
+                        <h3>Pyar-Kiya-To-Darna-Kya</h3>
+                    </div>
+                    <div>
+                        <img src="poster/Judwaa.png" alt="Movie 14" class="img-fluid">
+                        <h3>Judwaa</h3>
                     </div>
                     <!-- Add more movie slides here -->
                 </div>

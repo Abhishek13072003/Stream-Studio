@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="icon" href="logo/logo3.png" type="image/x-icon" />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="login.css" />
+
+    <title>Login Form</title>
+</head>
+<body>
+    <header>
+        <img class="logo" src="logo/logo1.png" alt="logo" width="200" />
+        <nav>
+      </nav>
+        <marquee
+            direction="right"
+            behavior="alternate"
+            style="border: BLACK 2px SOLID"
+        >
+            Geeks for Geeks
+        </marquee>
+    </header>
+
+    <div class="box">
+        <div class="flip-card-inner">
+            <div class="box-login" id="loginBox">
+                <ul>
+                    <form id="loginForm">
+                        <h1>LOGIN</h1>
+                        <div class="email-login">
+                            <input
+                                class="inpt"
+                                type="email"
+                                name="email"
+                                id="loginEmail"
+                                placeholder="Email "
+                                required
+                            />
+                            <i class="fa fa-envelope"></i>
+                        </div>
+
+                        <div class="password-login">
+                            <input
+                                class="inpt"
+                                type="password"
+                                name="password"
+                                id="loginPassword"
+                                placeholder="Password"
+                                required
+                            />
+                            <i id="eye-login" class="fa fa-eye-slash"></i>
+                        </div>
+
+                        <div class="forget">
+                            <input type="checkbox" name="checkbox1" id="checkbox" />
+                            <label for="checkbox">Remember me</label>
+                            <a href="#">Forget Password?</a>
+                        </div>
+                        <button type="submit" class="btn">LOGIN</button>
+                    </form>
+                    <div class="register-link">
+                        <p>
+                            Dont have an account? <a href="#" onclick="flip()">Sign Up</a>
+                        </p>
+                    </div>
+                </ul>
+            </div>
+            <div class="box-signup">
+                <ul>
+                    <form id="signupForm">
+                        <h1>SIGN UP</h1>
+                        <div class="user-signup">
+                            <input
+                                class="inpt"
+                                type="text"
+                                name="username"
+                                id="signupUsername"
+                                placeholder="User Name"
+                            />
+                            <i class="fa fa-user"></i>
+                        </div>
+
+                        <div class="email-signup">
+                            <input
+                                class="inpt"
+                                type="email"
+                                name="email"
+                                id="signupEmail"
+                                placeholder="Email "
+                                required
+                            />
+                            <i class="fa fa-envelope"></i>
+                        </div>
+
+                        <div class="password-signup">
+                            <input
+                                class="inpt"
+                                type="password"
+                                name="password"
+                                id="signupPassword"
+                                placeholder="Password"
+                                required
+                            />
+                            <i id="eye-signup" class="fa fa-eye-slash"></i>
+                        </div>
+
+                        <div class="forget">
+                            <input type="checkbox" name="checkbox1" id="checkbox1" />
+                            <label for="checkbox1">Remember me</label>
+                            <a href="#">Forget Password?</a>
+                        </div>
+                        <button type="submit" class="btn">SIGN UP</button>
+                    </form>
+                    <div class="register-link">
+                        <p>
+                            Already have an account?
+                            <a href="#" onclick="flipAgain()">Log In</a>
+                        </p>
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+    <script src="login.js"></script>
+
+    <script>
+        const backendUrl = "https://streamstudio.vercel.app"; // Replace this with your actual backend URL
+
+        // Check if the user is already logged in
+        window.onload = function() {
+            const email = localStorage.getItem("loggedInUser");
+            if (email) {
+                // Redirect to profile page if user is logged in
+                window.location.href = `/profile.html?email=${email}`;
+            }
+        };
+
+        // Function to handle login form submission
+        document
+            .getElementById("loginForm")
+            .addEventListener("submit", async (e) => {
+                e.preventDefault();
+                const email = document.getElementById("loginEmail").value;
+                const password = document.getElementById("loginPassword").value;
+                try {
+                    const response = await axios.post(`${backendUrl}/login`, {
+                        email,
+                        password,
+                    });
+                    // Store the logged-in user's email in localStorage
+                    localStorage.setItem("loggedInUser", email);
+                    // Redirect to profile page after successful login with email as URL parameter
+                    window.location.href = `/profile.html?email=${email}`;
+                } catch (error) {
+                    console.error(error.response.data); // Handle error response
+                    alert("Login failed. Please check your credentials and try again.");
+                }
+            });
+
+        // Function to handle signup form submission
+        document
+            .getElementById("signupForm")
+            .addEventListener("submit", async (e) => {
+                e.preventDefault();
+                const username = document.getElementById("signupUsername").value;
+                const email = document.getElementById("signupEmail").value;
+                const password = document.getElementById("signupPassword").value;
+                try {
+                    const response = await axios.post(`${backendUrl}/signup`, {
+                        username,
+                        email,
+                        password,
+                    });
+                    // Store the signed-up user's email in localStorage
+                    localStorage.setItem("loggedInUser", email);
+                    // Redirect to profile page after successful signup with email as URL parameter
+                    window.location.href = `/profile.html?email=${email}`;
+                } catch (error) {
+                    // console.error(error.response.data); // Handle error response
+                    alert("Signup failed. Please try again later.");
+                }
+            });
+    </script>
+</body>
+</html>

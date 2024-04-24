@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Interface</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            padding-top: 56px; /* Adjusted for fixed navbar height */
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        th,
+        td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #eb8f0f;
+            color: white;
+        }
+
+        tr:hover {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" href="#">Admin Panel</a>
+    </nav>
+
+    <main role="main">
+        <h1>Submissions</h1>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>email</th>
+                                <th>contact</th>
+                                <th>genre</th>
+                                <th>Title</th>
+                                <th>Description</th>
+                                <th>url</th>
+                                <!-- Add more table headers as needed -->
+                            </tr>
+                        </thead>
+                        <tbody id="submission-table-body">
+                            <!-- Table body content will be added dynamically -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script>
+        // Example data (replace with actual data from the form submission)
+        const submissions = [
+            { title: "Movie Title 1", description: "Description 1", genre: "Action" },
+            { title: "Movie Title 2", description: "Description 2", genre: "Comedy" },
+            // Add more submission data as needed
+        ];
+
+        // Function to populate the table with submission data
+        function populateTable() {
+            const tableBody = document.getElementById('submission-table-body');
+
+            // Clear existing table rows
+            tableBody.innerHTML = '';
+
+            // Loop through submissions and add rows to the table
+            submissions.forEach(submission => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${submission.title}</td>
+                    <td>${submission.description}</td>
+                    <td>${submission.genre}</td>
+                    <!-- Add more table cells for additional data -->
+                `;
+                tableBody.appendChild(row);
+            });
+        }
+
+        // Call the function to populate the table
+        populateTable();
+    </script>
+</body>
+
+</html>

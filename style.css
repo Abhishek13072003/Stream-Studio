@@ -181,7 +181,7 @@ h3{
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    padding: 0 0; /* Adjust padding as needed */
+    padding: 100 0; /* Adjust padding as needed */
 }
 
 /* Media Query for responsiveness */
@@ -240,7 +240,7 @@ h3{
     z-index: 1;
 }
 #home-slider .slick-bg.s-bg-1{
-    background-image: url(slider/slider1.jpg);
+    background-image: url(slider/hp1.jpg);
     
 }
 

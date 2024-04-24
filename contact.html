@@ -10,22 +10,29 @@
     <!-- Slick Carousel CSS -->
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
-  <link rel="stylesheet" href="style.css">
+  <!-- <link rel="stylesheet" href="style.css"> -->
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f4f4f4;
+    header {
+      background-color: transparent;
+      box-shadow: 0 4px 8px 10px rgba(34, 32, 32, 0.968);
     }
+  body {
+  background-image: url("BBG/bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width :100%;
+  height: auto;
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
 
     .container {
       max-width: 800px;
       margin: 0 auto;
       padding: 20px;
-      background-color: #fff;
+      background-color: gray;
       border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 4px 8px 10px rgba(34, 32, 32, 0.968);
     }
 
     h1 {
@@ -60,7 +67,7 @@
     }
 
     .contact-form input[type="submit"] {
-      background-color: #007bff;
+      background-color: #f2870c;
       color: #fff;
       border: none;
       padding: 12px 20px;
@@ -70,38 +77,15 @@
     }
 
     .contact-form input[type="submit"]:hover {
-      background-color: #0056b3;
+      background-color: #eb7c14;
     }
   </style>
 </head>
 <body>
     <header>
         <img class="logo" src="logo/logo1.png" alt="logo" width="200" >
-        <nav>
-            <ul>
-                <li style="font-size: large;">
-                    <a href="#" onMouseOver="this.style.color='red'" onMouseOut="this.style.color='white'">Home</a></li>
-                <li style="font-size: large;">
-                    <a href="Romantic.html" onMouseOver="this.style.color='red'" onMouseOut="this.style.color='white'">Romantic</a></li>
-                <li style="font-size: large;">
-                    <a href="Action.html" onMouseOver="this.style.color='red'" onMouseOut="this.style.color='white'">Action</a></li>
-                <li style="font-size: large;">
-                    <a href="Comedy.html" onMouseOver="this.style.color='red'" onMouseOut="this.style.color='white'">Comedy</a></li>
-                <li style="font-size: large;">
-                    <a href="Drama.html" onMouseOver="this.style.color='red'" onMouseOut="this.style.color='white'">Drama</a></li>
-                <li style="font-size: large;">
-                    <a href="contact.html" onMouseOver="this.style.color='red'" onMouseOut="this.style.color='white'">Contact</a></li>
-
-                    
-            </ul>
-        </nav>
-         <!-- Search bar -->
-         <div class="search-container" >
-            <input type="text" id="searchInput" placeholder="Search movies...">
-            <button id="searchButton">Search</button>
-        </div>
     </header>
-
+<br><br>
   <div class="container">
     <h1>Contact Us</h1>
     <div class="contact-info">
@@ -119,17 +103,16 @@
       </form>
     </div>
   </div>
-  <footer class="bg-dark text-white py-4 text-center">
+
+  <!-- <footer class="bg-dark text-white py-4 text-center">
     <div class="container">
         <p>&copy; 2024 Stream Studio</p>
     </div>
-</footer>
+</footer> -->
  <!-- jQuery -->
  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
  <!-- Bootstrap JS -->
  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
- <!-- Slick Carousel JS -->
- <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
  <script src="script.js"></script>
 </body>
 </html>
